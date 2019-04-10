@@ -1,7 +1,7 @@
 {
-  "name": "postcss-overflow-scrolling-touch",
+  "name": "@knowbly/postcss-overflow-scrolling-touch",
   "version": "0.0.0",
-  "description": "PostCSS plugin Put native-feeling elastic/inertia scrolling whenever we have an element with overflow: scroll (or overflow-x / overflow-y)",
+  "description": "Put native-feeling elastic/inertia scrolling whenever we have an element with overflow: scroll (or overflow-x / overflow-y)",
   "keywords": [
     "postcss",
     "css",
@@ -12,13 +12,12 @@
   "scripts": {
     "test": "jest && eslint *.js"
   },
-  "author": "Gean <w4ch4p@gmail.com>",
   "license": "MIT",
-  "repository": "wochap/postcss-overflow-scrolling-touch",
+  "repository": "Knowbly/postcss-overflow-scrolling-touch",
   "bugs": {
-    "url": "https://github.com/wochap/postcss-overflow-scrolling-touch/issues"
+    "url": "https://github.com/Knowbly/postcss-overflow-scrolling-touch/issues"
   },
-  "homepage": "https://github.com/wochap/postcss-overflow-scrolling-touch",
+  "homepage": "https://github.com/Knowbly/postcss-overflow-scrolling-touch",
   "dependencies": {
     "postcss": "^7.0.6"
   },

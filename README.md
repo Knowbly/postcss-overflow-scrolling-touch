@@ -1,27 +1,30 @@
-# PostCSS Overflow Scrolling Touch [![Build Status][ci-img]][ci]
+# PostCSS Overflow Scrolling Touch
 
-[PostCSS] plugin Put native-feeling elastic/inertia scrolling whenever we have an element with overflow: scroll (or overflow-x / overflow-y).
+[PostCSS] plugin
+
+Put native-feeling elastic/inertia scrolling whenever we have an element with overflow: scroll (or overflow-x / overflow-y).
 
 [PostCSS]: https://github.com/postcss/postcss
-[ci-img]:  https://travis-ci.org/wochap/postcss-overflow-scrolling-touch.svg
-[ci]:      https://travis-ci.org/wochap/postcss-overflow-scrolling-touch
 
 ```css
 .foo {
-    /* Input example */
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 ```
 
 ```css
 .foo {
-  /* Output example */
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 ```
 
 ## Usage
 
 ```js
-postcss([ require('postcss-overflow-scrolling-touch') ])
+postcss([ require('@knowbly/postcss-overflow-scrolling-touch') ])
 ```
 
 See [PostCSS] docs for examples for your environment.

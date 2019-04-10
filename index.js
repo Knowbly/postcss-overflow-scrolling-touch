@@ -2,12 +2,22 @@ var postcss = require('postcss')
 
 module.exports = postcss.plugin('postcss-overflow-scrolling-touch', function (opts) {
   opts = opts || {}
-
-  // Work with options here
-
   return function (root, result) {
-
-    // Transform CSS AST here
-
+    root.walkRules(function (rule) {
+      rule.walkDecls(/^overflow-?/, function (decl) {
+        if (['scroll', 'auto'].includes(decl.value)) {
+          var hasTouch = rule.some(function (i) {
+            return i.prop === '-webkit-overflow-scrolling'
+          })
+          if (!hasTouch) {
+            rule.append({
+              prop: '-webkit-overflow-scrolling',
+              value: 'touch'
+            })
+          }
+        }
+      })
+    })
   }
 })
+
