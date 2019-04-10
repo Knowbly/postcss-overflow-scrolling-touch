@@ -5,7 +5,7 @@ module.exports = postcss.plugin('postcss-overflow-scrolling-touch', function (op
   return function (root, result) {
     root.walkRules(function (rule) {
       rule.walkDecls(/^overflow-?/, function (decl) {
-        if (['scroll', 'auto'].includes(decl.value)) {
+        if (['scroll', 'auto', 'inherit'].includes(decl.value)) {
           var hasTouch = rule.some(function (i) {
             return i.prop === '-webkit-overflow-scrolling'
           })
